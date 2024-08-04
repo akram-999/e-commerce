@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.left{
+    flex: 1;
+}
+
+.left img{
+    height: 80px;
+}
+
+.center{
+    flex: 1;
+    
+    
+}
+
+.center ul{
+   display: flex;
+   justify-content: space-between;
+   
+}
+
+.center ul li{
+    list-style: none;
+    align-items: center;
+    margin-top: 30px;
+    
+   
+}
+
+.center ul li .link{
+    text-decoration: none;
+    color: black;
+}
+
+
+.right{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right ul{
+    display: flex;
+    align-items: center;
+    
+}
+
+.right ul li{
+    margin-top: 30px;
+    margin-right: 10px;
+    list-style: none;
+
+    
+}
+
+.right ul li .link1{
+    text-decoration: none;
+    color: rgb(121, 36, 240);
+    border: 1px solid rgb(121, 36, 240);
+    padding: 10px 25px;
+    transition: all 0.5s ease;
+}
+
+.right ul li .link1:hover{
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgb(121, 36, 240);
+    background-color: rgb(121, 36, 240);
+    padding: 10px 25px;
+    
+    
+}
+
+.right ul li .link2{
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgb(121, 36, 240);
+    background-color: rgb(121, 36, 240);
+    padding: 10px 20px;
+    transition: all 0.5s ease;
+}
+
+.right ul li .link2:hover{
+    text-decoration: none;
+    color: rgb(121, 36, 240);
+    border: 1px solid rgb(121, 36, 240);
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.right ul li .link  .icon{
+    color: black;
+    font-size: 30px;
+    padding-bottom: 5px;
+    
+}
+
+.right ul li .link .badge {
+    margin-right: 10px;
+    
+    
+}
+
+.right ul li .link .badge .icon{
+    color: black;
+    font-size: 30px;
+    padding-bottom: 5px;
+    
+}
