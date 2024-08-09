@@ -1,0 +1,47 @@
+.div{
+    position: relative;
+}
+
+.ul{
+    display: flex;
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.3s ease;
+    
+    
+}
+
+.ul:hover{
+    display: flex;
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    z-index: 2;
+    opacity: 1;
+    
+    
+}
+
+.ul li{
+    background-color: rgb(137, 43, 226);
+    padding: 5px;
+    border-radius: 50%;
+    margin: 5px;
+
+}
+
+.ul li .link{
+   text-decoration: none;
+   color: white;
+   
+}
+
+.ul li:hover{
+    text-decoration: none;
+    color: white;
+    transform: scale(1.3);
+    
+ }
