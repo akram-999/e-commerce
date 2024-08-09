@@ -22,7 +22,7 @@ export default function navbar() {
         <ul>
             <li><Link to='/favourite' className='link'><FavoriteIcon className='icon' /></Link></li>
             <li><Link to='/cart' className='link'>
-              <Badge badgeContent={4} className='badge' color="secondary" >
+              <Badge badgeContent={3} className='badge' color="secondary" >
                 <LocalMallIcon className='icon' />
               </Badge>
             </Link></li>
