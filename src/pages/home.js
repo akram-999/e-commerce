@@ -12,8 +12,8 @@ export default function home() {
       <Banner/>
       <Navbar/>
       <Hero/>
-      <Products/>
       <Feature />
+      <Products/>
       <Footer />
 
     </div>
