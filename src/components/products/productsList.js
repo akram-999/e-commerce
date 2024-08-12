@@ -1,17 +1,34 @@
-import React from 'react'
-import {products} from './data'
+import React, { useState } from 'react'
+import {Products} from './data'
 import { Link } from 'react-router-dom'
 import './products.css'
 
-export default function productsList() {
+export default function ProductsList() {
+  const [product,setProduct] = useState(Products)
+  const filterProducts = (catPro) =>{
+      const update = Products.filter((curPro)=>{
+        return curPro.category === catPro
+      })
+      setProduct(update)
+  }
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
+      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 dad">
+        {/* <h2 className="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2> */}
+        <div className='leftt'> 
+          <h3 className='cat'>Categories</h3>
+          <ul className='ul2'>
+            <li className='li'><button className='btt' type='button' onClick={()=>setProduct(Products)}>All Products</button></li>
+            <li className='li'><button className='btt' type='button' onClick={()=>filterProducts("chemise")}>chemise</button></li>
+            <li className='li'><button className='btt' type='button' onClick={()=>filterProducts("Shoes")}>Shoes</button></li>
+            <li className='li'><button className='btt' type='button' onClick={()=>filterProducts("Jeans")}>Jeans</button></li>
+            <li className='li'><button className='btt' type='button' onClick={()=>filterProducts("shirt")}>shirt</button></li>
+          </ul>
 
-        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-          {products.map((product) => (
-            <div key={product.id} className="group relative">
+        </div>
+        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 rightt">
+          {product.map((productt) => (
+            <div key={productt.id} className="group relative">
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none  lg:h-80 div">
                 <ul className='ul '>
                     <li><Link to="/cart" className='link'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -31,22 +48,22 @@ export default function productsList() {
                     </li>
                 </ul>
                 <img
-                  alt={product.imageAlt}
-                  src={product.imageSrc}
+                  alt={productt.imageAlt}
+                  src={productt.imageSrc}
                   className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                 />
               </div>
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700">
-                    <a href={product.href}>
+                    <a href={productt.href}>
                       <span aria-hidden="true" className="absolute inset-0" />
-                      {product.name}
+                      {productt.name}
                     </a>
                   </h3>
-                  <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                  <p className="mt-1 text-sm text-gray-500">{productt.color}</p>
                 </div>
-                <p className="text-sm font-medium text-gray-900">{product.price}</p>
+                <p className="text-sm font-medium text-gray-900">{productt.price}</p>
               </div>
             </div>
           ))}

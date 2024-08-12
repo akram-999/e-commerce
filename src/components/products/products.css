@@ -45,3 +45,35 @@
     transform: scale(1.3);
     
  }
+
+ .dad{
+    display: flex;
+ }
+
+ .dad .leftt{
+    flex: 2;
+    background-color: rgba(137, 43, 226, 0.747);
+    margin-top: 24px;
+    border-radius: 10px 10px 10px 10px;
+    margin-right: 10px;
+ }
+
+ .dad .leftt .cat{
+   margin: 30px;
+   color: rgb(106, 8, 197);
+   
+ }
+
+ .dad .leftt .ul2 .li .btt{
+    margin: 10px;
+    color: white;
+  }
+ 
+  .dad .leftt .ul2 .li .btt:hover{
+    margin: 10px;
+    border-bottom: 2px solid white;
+  }
+
+ .dad .rightt{
+    flex: 7;
+ }
