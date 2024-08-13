@@ -52,7 +52,7 @@
 
  .dad .leftt{
     flex: 2;
-    background-color: rgba(137, 43, 226, 0.747);
+    background-color: rgb(137, 43, 226);
     margin-top: 24px;
     border-radius: 10px 10px 10px 10px;
     margin-right: 10px;
@@ -60,7 +60,7 @@
 
  .dad .leftt .cat{
    margin: 30px;
-   color: rgb(106, 8, 197);
+   color: whitesmoke;
    
  }
 
@@ -76,4 +76,40 @@
 
  .dad .rightt{
     flex: 7;
+ }
+
+ @keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+ }
+
+ @keyframes cus {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+ }
+
+
+ .tittle{
+    animation: cus linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+ }
+
+
+ .prod{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% ;
  }

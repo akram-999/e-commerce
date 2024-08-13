@@ -16,7 +16,7 @@ export default function ProductsList() {
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 dad">
         {/* <h2 className="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2> */}
         <div className='leftt'> 
-          <h3 className='cat'>Categories</h3>
+          <h3 className=' cat'>Categories</h3>
           <ul className='ul2'>
             <li className='li'><button className='btt' type='button' onClick={()=>setProduct(Products)}>All Products</button></li>
             <li className='li'><button className='btt' type='button' onClick={()=>filterProducts("chemise")}>chemise</button></li>
@@ -28,7 +28,7 @@ export default function ProductsList() {
         </div>
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 rightt">
           {product.map((productt) => (
-            <div key={productt.id} className="group relative">
+            <div key={productt.id} className="group relative ">
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none  lg:h-80 div">
                 <ul className='ul '>
                     <li><Link to="/cart" className='link'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
