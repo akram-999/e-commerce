@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-export default function login() {
+export default function Login() {
+  const [email,setEmail] = useState('')
+  const [password,setPassword] = useState('')
   return (
     <div class="font-[sans-serif] bg-gradient-to-r from-purple-900 via-purple-800 to-purple-600 text-gray-800">
       <div class="min-h-screen flex fle-col items-center justify-center lg:p-6 p-4">
@@ -21,10 +23,10 @@ export default function login() {
             </h3>
 
             <div>
-              <input name="email" type="email" autocomplete="email" required class="bg-gray-100 focus:bg-transparent w-full text-sm px-4 py-3.5 rounded-md outline-gray-800" placeholder="Email address" />
+              <input name="email" type="email" autocomplete="email" required class="bg-gray-100 focus:bg-transparent w-full text-sm px-4 py-3.5 rounded-md outline-gray-800" placeholder="Email address" onChange={(e) => setEmail(e.target.value)}/>
             </div>
             <div>
-              <input name="password" type="password" autocomplete="current-password" required class="bg-gray-100 focus:bg-transparent w-full text-sm px-4 py-3.5 rounded-md outline-gray-800" placeholder="Password" />
+              <input name="password" type="password" autocomplete="current-password" required class="bg-gray-100 focus:bg-transparent w-full text-sm px-4 py-3.5 rounded-md outline-gray-800" placeholder="Password" onChange={(e) => setPassword(e.target.value)}/>
             </div>
            
             <div>
