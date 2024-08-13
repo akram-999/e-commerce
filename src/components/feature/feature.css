@@ -1,0 +1,14 @@
+.one{
+    display: flex;
+    justify-content: space-between;
+}
+
+.all{
+   margin: 10px;
+}
+
+
+
+.par:hover{
+    transform: scale(1.2);
+}

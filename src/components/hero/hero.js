@@ -4,10 +4,10 @@ import './hero.css'
 
 export default function hero() {
   return (
-    <div className="relative overflow-hidden bg-white">
-      <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
+    <div className="relative overflow-hidden bg-white ">
+      <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40 ">
         <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
-          <div className="sm:max-w-lg">
+          <div className="sm:max-w-lg ">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               Summer styles are finally here
             </h1>
@@ -15,7 +15,19 @@ export default function hero() {
               This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
               if you live or die.
             </p>
+            <Link  to='/products'
+                className="link"
+              >
+              <button className='cta'>
+                <span>Shop Now</span>
+                <svg width="15px" height="10px" viewBox="0 0 13 10">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+              </button>
+              </Link>
           </div>
+         
           <div>
             <div className="mt-10">
               {/* Decorative image grid */}
@@ -84,17 +96,7 @@ export default function hero() {
                 </div>
               </div>
 
-              <Link  to='/products'
-                className="link"
-              >
-              <button className='cta'>
-                <span>Shop Now</span>
-                <svg width="15px" height="10px" viewBox="0 0 13 10">
-                  <path d="M1,5 L11,5"></path>
-                  <polyline points="8 1 12 5 8 9"></polyline>
-                </svg>
-              </button>
-              </Link>
+             
               
             </div>
           </div>
