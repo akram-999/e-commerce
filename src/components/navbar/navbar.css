@@ -7,7 +7,7 @@
     padding: 0;
 }
 
-.container{
+/* .container{
     display: flex;
     justify-content: space-between;
     
@@ -114,4 +114,8 @@
     font-size: 30px;
     padding-bottom: 5px;
     
+} */
+
+.link{
+    text-decoration: none;
 }
